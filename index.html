@@ -3,14 +3,15 @@
 
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Ocean Resort and Marina</title>
-
-
+    
     <style>
-        * {
+
+       * {
             box-sizing: border-box;
         }
-        
+
         body {
             background-color: #d5dcec;
             font-family: Arial, Verdana, sans-serif;
@@ -26,13 +27,13 @@
             background-color: #fff;
             box-shadow: 3px 3px 3px #666;
         }
-        
+
         header {
             background-color: #5d5f93;
             color: #FFFFFF;
             font-family: Georgia, serif;
         }
-        
+
         h1 {
             font-size: 2em;
             background-image: url(images/bg-photo.jpg);
@@ -48,11 +49,11 @@
             margin: 0;
             padding-left: 0;
         }
-        
+
         nav li {
             float: left;
         }
-        
+
         nav a {
             display: block;
             padding: 15px;
@@ -61,11 +62,11 @@
             font-weight: bold;
             color: #000;
         }
-        
+
         nav a:hover {
             color: #5d5f93;
         }
-        
+
         nav {
             background-color: #c7c8c3;
             border-top: 1px solid #000;
@@ -81,7 +82,7 @@
             display: block;
             clear: left;
         }
-        
+
         h2,
         h3 {
             color: #5d5f93;
@@ -93,16 +94,21 @@
             width: 720px;
             padding: 15px 5px;
         }
-        
+
+        main h2{
+            font-size: 170%;
+        }
+
         main ul {
             line-height: 180%;
+            font-size: 120%;
         }
 
         /* right column */        
         aside {
-            width: 240px;
-            margin-left: 720px;
-            padding: 15px 5px;
+            width: 30%;
+            margin-left: 70%;
+            padding: 15px 5px 5px;
             text-align: center;
         }
 
@@ -112,7 +118,8 @@
             text-align: center;
             font-size: 0.9em;
         }
-        
+
+
         footer {
             padding: 20px;
             text-align: center;
@@ -120,10 +127,89 @@
             border-top: 1px solid #000;
             margin-top: 10px;
         }
+
+/*  *************************************************
+   **************  MEDIA QUERIES Here ******************
+*/
+
+        @media only screen and (max-width : 1024px){
+            main {
+                width: 70%;
+            }
+
+            #outer {
+                width: 100%;
+                height: 100%;
+                margin: 0px;
+                padding: 0px;
+            }
         
-        /*  *************************************************
-            **************  MEDIA QUERIES Here ******************
-        */
+            header h1{
+                margin: 0px;
+            }
+        }
+
+        @media only screen and (max-width : 768px){
+            main {
+                float: none;
+                width: 100%;
+            }
+            aside{
+                display: flex;
+                flex-wrap:wrap;
+                justify-content: center;
+                width: 100%;
+                height: 30vh;
+                margin: 0px;
+            }
+            aside figure{
+                margin: 5px;
+                width: 40%;
+            }
+
+        }
+
+        @media only screen and (max-width : 600px){
+            footer{
+                position: fixed;
+                width: 100%;
+                bottom: 0px;
+            }
+            #outer{
+                display: flex;
+                flex-direction: column;
+                min-width: 300px;
+            }
+            nav ul{
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+            }
+            nav ul li {
+                border-bottom: 1px solid black;
+                margin: 0px;
+                padding: 0px;
+            }
+            nav a{
+                padding: 6px;
+                font-size: 1.1rem;
+            }
+            nav a:hover{
+                color: white;
+            }
+            main h2{
+                margin: 1px;
+            }
+            aside{
+                display: inline-block;
+                height: 100%;
+                padding-top: 1px;
+                margin-bottom: 60px;
+            }
+            aside figure{
+                width: 100%;
+            }
+        }
     </style>
 
 </head>
@@ -146,7 +232,7 @@
             </ul>
         </nav>
 
-
+ 
         <main>
             <h2>Enjoy the Views and Amenities</h2>
             <p>Ocean Resort and Marina offers a special experience on the California Coast. Relax in serenity with panoramic views of the Pacific Ocean.</p>
